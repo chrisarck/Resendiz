@@ -5,6 +5,9 @@
 package inicioGUI;
 
 import colaboradoresGUI.frDirector;
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
@@ -20,6 +23,7 @@ public class frModo extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
     }
 
     /**
@@ -34,13 +38,16 @@ public class frModo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnDirector = new javax.swing.JButton();
         btnColaborador = new javax.swing.JButton();
+        regresar = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
-        jLabel1.setText("ELIJA EL MODO EN EL QUE DESEA PARTICIPAR");
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel1.setText("ELIJA EL MODO EN EL QUE PARTICIPA");
         jLabel1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        btnDirector.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnDirector.setText("Director General");
         btnDirector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,10 +55,27 @@ public class frModo extends javax.swing.JFrame {
             }
         });
 
+        btnColaborador.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnColaborador.setText("Colaborador");
         btnColaborador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnColaboradorActionPerformed(evt);
+            }
+        });
+
+        regresar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        regresar.setText("REGRESAR");
+        regresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regresarActionPerformed(evt);
+            }
+        });
+
+        salir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        salir.setText("SALIR");
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
             }
         });
 
@@ -60,26 +84,37 @@ public class frModo extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(95, 95, 95)
-                .addComponent(btnDirector, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(170, 170, 170)
+                .addComponent(btnDirector, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(86, 86, 86)
                 .addComponent(btnColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(107, 107, 107))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(108, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(96, 96, 96))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 761, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(regresar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(salir)
+                        .addGap(26, 26, 26))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(127, 127, 127)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnDirector, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDirector, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 280, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(regresar)
+                    .addComponent(salir))
+                .addGap(33, 33, 33))
         );
 
         pack();
@@ -88,12 +123,26 @@ public class frModo extends javax.swing.JFrame {
     private void btnDirectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDirectorActionPerformed
         frRegistroDirector newframe = new frRegistroDirector();
         newframe.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnDirectorActionPerformed
 
     private void btnColaboradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColaboradorActionPerformed
-        frDirector newframe = new frDirector();
+        frRegistroColaborador newframe = new frRegistroColaborador();
         newframe.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnColaboradorActionPerformed
+
+    private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed
+        // TODO add your handling code here:
+        frIngresar newframe = new frIngresar();
+        newframe.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_regresarActionPerformed
+
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_salirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,5 +184,7 @@ public class frModo extends javax.swing.JFrame {
     private javax.swing.JButton btnColaborador;
     private javax.swing.JButton btnDirector;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton regresar;
+    private javax.swing.JButton salir;
     // End of variables declaration//GEN-END:variables
 }

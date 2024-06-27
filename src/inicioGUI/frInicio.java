@@ -4,6 +4,9 @@
  */
 package inicioGUI;
 
+import colaboradoresGUI.frColaboradores;
+import javax.swing.JFrame;
+
 /**
  *
  * @author andra
@@ -15,6 +18,8 @@ public class frInicio extends javax.swing.JFrame {
      */
     public frInicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     /**
@@ -26,54 +31,90 @@ public class frInicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        salir = new javax.swing.JButton();
+        generarEmpresa = new javax.swing.JButton();
+        nuevaEmpresa = new javax.swing.JButton();
+        fondoInicio = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 500));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
-        jLabel1.setText("BIENVENIDO A LA CREACION DE SU NUEVA EMPRESA");
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("NUEVO MUNDO");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("BIENVENIDO A SU NUEVA");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 450, 70));
 
-        jButton2.setText("SALIR");
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("EMPRESA EN LINEA");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
 
-        jButton3.setText("MUNDO CREADO");
+        salir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        salir.setText("SALIR");
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 180, 50));
+
+        generarEmpresa.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        generarEmpresa.setText("GENERAR EMPRESA");
+        generarEmpresa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generarEmpresaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(generarEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 230, 50));
+
+        nuevaEmpresa.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        nuevaEmpresa.setText("NUEVA EMPRESA");
+        nuevaEmpresa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nuevaEmpresaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(nuevaEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, 200, 50));
+
+        fondoInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondoInicio.jpg"))); // NOI18N
+        fondoInicio.setPreferredSize(new java.awt.Dimension(800, 500));
+        jPanel1.add(fondoInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 550));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(88, 88, 88))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(149, 149, 149)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addGap(61, 61, 61)
-                .addComponent(jButton1)
-                .addGap(191, 191, 191))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(215, 215, 215)
-                .addComponent(jLabel1)
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addContainerGap(153, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+
+    }//GEN-LAST:event_salirActionPerformed
+
+    private void generarEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarEmpresaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_generarEmpresaActionPerformed
+
+    private void nuevaEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevaEmpresaActionPerformed
+        // TODO add your handling code here:
+        frIngresar newframe = new frIngresar();
+        newframe.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_nuevaEmpresaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,9 +152,12 @@ public class frInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel fondoInicio;
+    private javax.swing.JButton generarEmpresa;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton nuevaEmpresa;
+    private javax.swing.JButton salir;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,8 @@
  */
 package colaboradoresGUI;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author andra
@@ -15,6 +17,8 @@ public class frColaboradores extends javax.swing.JFrame {
      */
     public frColaboradores() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     /**
@@ -41,11 +45,13 @@ public class frColaboradores extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(800, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(0, 51, 102));
@@ -172,6 +178,9 @@ public class frColaboradores extends javax.swing.JFrame {
 
         jPanel3.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 220, 50));
 
+        jButton2.setText("SALIR");
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, -1, -1));
+
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 480));
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
@@ -227,6 +236,7 @@ public class frColaboradores extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

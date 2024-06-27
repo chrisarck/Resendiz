@@ -4,8 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/andra/Documents/NetBeansProjects/Empresa1/src/colaboradoresGUI/frColaboradores.java</file>
-            <file>file:/C:/Users/andra/Documents/NetBeansProjects/Empresa1/src/colaboradoresGUI/frDirector.java</file>
+            <file>file:/C:/Users/andra/Documents/NetBeansProjects/Empresa1/src/accDirectorGUI/gananciasDirector.java</file>
             <file>file:/C:/Users/andra/Documents/NetBeansProjects/Empresa1/src/accDirectorGUI/datosPersonalesDirector.java</file>
+            <file>file:/C:/Users/andra/Documents/NetBeansProjects/Empresa1/src/accDirectorGUI/productividadDirector.java</file>
         </group>
     </open-files>
 </project-private>
